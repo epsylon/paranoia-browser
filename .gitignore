@@ -1,0 +1,5 @@
+build/
+dist/
+*~
+paranoia.egg-info/
+*.pyc
