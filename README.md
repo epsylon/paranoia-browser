@@ -6,7 +6,7 @@
 
 ----------
 
-  pArAnoIA - is a toolkit designed to navigate the Internet.
+  pArAnoIA - is a toolkit designed to navigate/surf the Internet.
 
   ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-main_small.png "pArAnoIA Main")
 
@@ -44,10 +44,10 @@ in the [LICENSE](./docs/LICENSE) file.
 
 ####  Screenshots (current version!):
 
-  ![pArAnoIA](https://paranoia.03c8.net/paranoia/paranoia1_small.png "pArAnoIA Example1")
+  ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia1_small.png "pArAnoIA Example1")
 
-  ![pArAnoIA](https://paranoia.03c8.net/paranoia/paranoia2_small.png "pArAnoIA Example2")
+  ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia2_small.png "pArAnoIA Example2")
 
-  ![pArAnoIA](https://paranoia.03c8.net/paranoia/paranoia3_small.png "pArAnoIA Example3")
+  ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia3_small.png "pArAnoIA Example3")
 
 
