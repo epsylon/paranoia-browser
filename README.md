@@ -1,12 +1,32 @@
-  ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-welcome_small.png "pArAnoIA Welcome")
-
-----------
-
- + Web:  https://browser.03c8.net
 
 ----------
 
   pArAnoIA - is a toolkit designed to navigate/surf the Internet.
+
+ + Web:  https://browser.03c8.net
+
+  ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-welcome_small.png "pArAnoIA Welcome")
+
+  Main features are:
+
+       - AutoSpoofing: User-Agent, Referer, Window(size)...
+       - TOR (proxy support)
+       - DNS (prefetching)
+       - XSS Audit
+       - Cache evasion
+       - HTTPS/SSL strict only
+       - PrivateBrowsing mode (no logs!)
+       - LiveInspector (extra developers tools)
+       - Source Code viewer
+       - Geolocation (domains visited, user IP...)
+       - NoStyles: CSS, images, fonts, etc...
+       - NoScripts: Javascript, Java, WebGL, WebAudio, etc..
+       - Spelling "hints" to: Wikipedia, NASA, Cambridge Dictionary, OpenStreetmaps, PornHub...
+       - Different "privacy based" search engines supported: DuckDuckGo, StartPage
+       - DarkWeb search engine supported: Torch!
+       - [...]
+
+  Current version (v0.1) is an "alpha" development.
 
   ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-main_small.png "pArAnoIA Main")
 
