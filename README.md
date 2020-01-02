@@ -26,7 +26,7 @@
        - DarkWeb search engine supported: Torch!
        - [...]
 
-  Current version (v0.1) is an "alpha" development.
+  Current version (v0.2) is on "beta" development.
 
   ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-main_small.png "pArAnoIA Main")
 
@@ -34,11 +34,12 @@
 
 #### Installing:
 
-  pArAnoIA runs on many platforms. It requires Python (>2.7.9) and the following libraries:
+  pArAnoIA runs on many platforms. It requires Python (3.x) and the following libraries:
 
-       python-gi - Python 2.x bindings for gobject-introspection libraries
-       python-geoip  - Python bindings for the GeoIP IP-to-country resolver library
-       python-requests - elegant and simple HTTP library for Python2, built for human beings
+       python3-gi - Python 3 bindings for gobject-introspection libraries
+       python3-geoip - Python3 bindings for the GeoIP IP-to-country resolver library
+       python3-requests - elegant and simple HTTP library for Python3, built for human beings
+       libgirepository1.0-dev - Library for handling GObject introspection data (development files)
 
   You can automatically get all required libraries using (as root):
 
@@ -46,12 +47,13 @@
 
   For manual installation, on Debian-based systems (ex: Ubuntu), run: 
 
-       sudo apt-get install python-gi python-geoip python-requests
+       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev
 
   On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
 
-       pip install geoip 
-       pip install requests
+       pip3 install requests
+       pip3 install PyGObject
+       pip3 install pygeoip
 
 ----------
 

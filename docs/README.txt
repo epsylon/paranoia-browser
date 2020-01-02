@@ -30,24 +30,26 @@ pArAnoIA - is a toolkit designed to surf the Internet.
 # Installing
 ###############################
 
-pArAnoIA runs on many platforms. It requires Python (>2.7.9) and the following libraries:
+  pArAnoIA runs on many platforms. It requires Python (3.x) and the following libraries:
 
-     python-gi - Python 2.x bindings for gobject-introspection libraries
-     python-geoip  - Python bindings for the GeoIP IP-to-country resolver library
-     python-requests - elegant and simple HTTP library for Python2, built for human beings
+       python3-gi - Python 3 bindings for gobject-introspection libraries
+       python3-geoip - Python3 bindings for the GeoIP IP-to-country resolver library
+       python3-requests - elegant and simple HTTP library for Python3, built for human beings
+       libgirepository1.0-dev - Library for handling GObject introspection data (development files)
 
-You can automatically get all required libraries using:
+  You can automatically get all required libraries using (as root):
 
-     sudo python setup.py install
+       sudo python setup.py install
 
-For manual installation on Debian-based systems (ex: Ubuntu), run: 
+  For manual installation, on Debian-based systems (ex: Ubuntu), run: 
 
-     sudo apt-get install python-gi python-geoip python-requests
+       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev
 
-On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
+  On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
 
-     pip install geoip 
-     pip install requests
+       pip3 install requests
+       pip3 install PyGObject
+       pip3 install pygeoip
 
 ###############################
 # Starting
@@ -55,12 +57,15 @@ On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... als
 
 To run pArAnoIA:
 
- ./pArAnoIA.py (or python2 pArAnoIA.py)
+ ./pArAnoIA.py (or python3 pArAnoIA.py)
 
 ###############################
 # Timelog
 ###############################
 
+--------------------------
+02.01.2020 : v.0.2b
+--------------------------
 --------------------------
 07.07.2019 : v.0.1a
 --------------------------

@@ -1,13 +1,26 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-"
 """
-[pArAnoIA_Browser] by /psy (03c8.net)/ - 2019
+[pArAnoIA_Browser] by /psy (03c8.net)/ - 2020
 
 You should have received a copy of the GNU General Public License along
-with pArAnoIA; if not, write to the Free Software Foundation, Inc., 51
+with pArAnoIA-Browser; if not, write to the Free Software Foundation, Inc., 51
 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 """
-import os, sys, gi, re, random, socket, requests, time, pygeoip, urlparse, urllib2
+import os, sys, re, random, socket, requests, time, urllib.parse, urllib.request, urllib.error
+
+try:
+    import gi
+except:
+    print("\nError importing: gi lib. \n\n To install it on Debian based systems:\n\n $ 'sudo apt-get install python3-gi' or 'pip3 install PyGObject'\n")
+    sys.exit(2)
+
+try:
+    import pygeoip
+except:
+    print("\n[Error] [AI] Cannot import lib: pygeoip. \n\n To install it try:\n\n $ 'sudo apt-get install python3-geoip' or 'pip3 install pygeoip'\n")
+    sys.exit(2)
+
 from uuid import getnode
 
 gi.require_version('Gtk', '3.0')
@@ -208,7 +221,7 @@ class Browser(object):
         html = self.get_html(url) # get source code from visited website
 
     def set_domain_name(self, url):
-        domain_url = '.'.join(urlparse.urlparse(url).netloc.split('.')[-2:])
+        domain_url = '.'.join(urllib.parse.urlparse(url).netloc.split('.')[-2:])
         self.domain_name.set_text("["+domain_url+"]")
 
     def check_url_spelling(self, url): # [rev: 26/06/2019]
@@ -343,7 +356,7 @@ class Browser(object):
         try:
             s.connect(("1.1.1.1", 1)) # black magic! /23-06-2019/ [UFONet+LoVe] ;-)
         except:
-            print "\n[Info] Network is unaccesible: Aborting!\n"
+            print("\n[Info] Network is unaccesible: Aborting!\n")
             sys.exit(2)
         private_ip = s.getsockname()[0]
         s.close()
@@ -374,7 +387,7 @@ class Browser(object):
             self.ip_location.set_text('[Unknown]')
 
     def check_geoip_visited_website(self, ip):
-        domain_url = '.'.join(urlparse.urlparse(ip).netloc.split('.')[-2:])
+        domain_url = '.'.join(urllib.parse.urlparse(ip).netloc.split('.')[-2:])
         try:
             record = self.ipData.record_by_name(domain_url)
             self.domain_location.set_text("["+str(record['country_name'])+"]")
@@ -747,8 +760,8 @@ class Browser(object):
         self.check_geoip_visited_website(self.home_website) # set geoip (Home)
 
     def check_requests_tor(self): # check for TOR via direct request
-        tor_reply = urllib2.urlopen(self.home_website).read() # check if TOR is enabled
-        if not tor_reply or 'Congratulations' not in tor_reply:
+        tor_reply = urllib.request.urlopen(self.home_website).read() # check if TOR is enabled
+        if not tor_reply or 'Congratulations'.encode('utf-8') not in tor_reply:
             self.tor_mode = "OFF"
             self.tor_mode_img.set_from_stock("gtk-no", 4)
         else:

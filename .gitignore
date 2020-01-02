@@ -1,5 +1,2 @@
-build/
-dist/
-*~
-paranoia.egg-info/
-*.pyc
+__pycache__/
+*.py[cod]
