@@ -40,6 +40,7 @@
        python3-geoip - Python3 bindings for the GeoIP IP-to-country resolver library
        python3-requests - elegant and simple HTTP library for Python3, built for human beings
        libgirepository1.0-dev - Library for handling GObject introspection data (development files)
+       gir1.2-webkit-3.0 - Web content engine library for GTK+ - GObject introspection data
 
   You can automatically get all required libraries using (as root):
 
@@ -47,7 +48,7 @@
 
   For manual installation, on Debian-based systems (ex: Ubuntu), run: 
 
-       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev
+       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev gir1.2-webkit-3.0
 
   On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
 
