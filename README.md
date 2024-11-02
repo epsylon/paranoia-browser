@@ -26,7 +26,7 @@
        - DarkWeb search engine supported: Torch!
        - [...]
 
-  Current version (v0.2) is on "beta" development.
+  Current version (v0.3) is on "beta" development.
 
   ![pArAnoIA](https://browser.03c8.net/paranoia/paranoia-main_small.png "pArAnoIA Main")
 
@@ -44,7 +44,7 @@
 
   You can automatically get all required libraries using (as root):
 
-       sudo python setup.py install
+       sudo python setup.py
 
   For manual installation, on Debian-based systems (ex: Ubuntu), run: 
 

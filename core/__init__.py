@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-"
 """
-[pArAnoIA_Browser] by /psy (03c8.net)/ - 2020
+[pArAnoIA_Browser] by /psy (https://browser.03c8.net/)/ - 2020/2024
 
 You should have received a copy of the GNU General Public License along
 with pArAnoIA-Browser; if not, write to the Free Software Foundation, Inc., 51

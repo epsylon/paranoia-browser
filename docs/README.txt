@@ -39,11 +39,11 @@ pArAnoIA - is a toolkit designed to surf the Internet.
 
   You can automatically get all required libraries using (as root):
 
-       sudo python setup.py install
+       sudo python setup.py
 
   For manual installation, on Debian-based systems (ex: Ubuntu), run: 
 
-       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev
+       sudo apt-get install python3-gi python3-geoip python3-requests libgirepository1.0-dev gir1.2-webkit-3.0
 
   On other systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
 
@@ -62,7 +62,9 @@ To run pArAnoIA:
 ###############################
 # Timelog
 ###############################
-
+--------------------------
+01.11.2024 : v.0.3
+--------------------------
 --------------------------
 02.01.2020 : v.0.2b
 --------------------------

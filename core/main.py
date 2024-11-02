@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-"
 """
-[pArAnoIA_Browser] by /psy (03c8.net)/ - 2020
+[pArAnoIA_Browser] by /psy (https://browser.03c8.net/)/ - 2020/2024
 
 You should have received a copy of the GNU General Public License along
 with pArAnoIA-Browser; if not, write to the Free Software Foundation, Inc., 51
@@ -266,7 +266,7 @@ class Browser(object):
                 url = url
             else:
                 if url.startswith('http://'):
-                    if self.https_strict is "ON":
+                    if self.https_strict == "ON":
                         url = url.replace('http://', "")
                         url = 'https://' + url
                         self.url.set_icon_from_stock(0, "gtk-dialog-authentication")
@@ -274,7 +274,7 @@ class Browser(object):
                         url = url
                         self.url.set_icon_from_stock(0, "gtk-dialog-warning")
                 else:
-                    if self.https_strict is "ON":
+                    if self.https_strict == "ON":
                         url = 'https://' + url
                         self.url.set_icon_from_stock(0, "gtk-dialog-authentication")
                     else:
@@ -375,7 +375,7 @@ class Browser(object):
                 public_ip = requests.get(self.check_ip_service1).text # method 2: direct request to third-party services
             except:
                 public_ip = "127.0.0.1"
-        if public_ip is not "127.0.0.1": # check for geolocation
+        if public_ip != "127.0.0.1": # check for geolocation
             self.check_geoip_ip_external(public_ip)
         self.ip_external.set_text(public_ip)
  
@@ -731,7 +731,7 @@ class Browser(object):
                     self.url.set_icon_from_stock(0, "gtk-home")
                     uri = 'https://' + uri
                 else:
-                    if self.https_strict is "ON":
+                    if self.https_strict == "ON":
                         self.url.set_icon_from_stock(0, "gtk-dialog-authentication")
                         uri = 'https://' + uri
                     else:
