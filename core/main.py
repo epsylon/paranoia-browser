@@ -32,7 +32,7 @@ Gdk.threads_init()
 
 class Browser(object):
     def __init__(self):
-        self.check_ip_service1 = 'https://ip.42.pl/ra' # set external check ip service-backup 1 [OK! 23/06/2019]
+        self.check_ip_service1 = 'https://checkip.org/' # set external check ip service-backup 1 [OK! 01/11/2024]
         self.home_website = "https://check.torproject.org" # Home website
         self.https_strict = "ON" # HTTPS(strict)
         self.navigation_mode = "EXPLORER" # Navigation mode
@@ -230,7 +230,7 @@ class Browser(object):
         elif "!0" in url: # !0 = 03c8.net(author) / just link!
             url = 'https://03c8.net' # ;-) 
         elif "!deep" in url: # !deep = Torch(content) / just link!
-            url = 'http://xmh57jrzrnw6insl.onion/'
+            url = 'http://xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/'
         elif "!start" in url: # !start = StartPage(tems)
             url = str(url.split(' ',1)[1])
             url = 'https://www.startpage.com/do/search?limit=10&lang=english&format=html&query=' + url
@@ -239,7 +239,7 @@ class Browser(object):
                 url = str(url.split(' ',1)[1])
                 url = "https://duckduckgo.com/?q=" + url
             else:
-                url = "https://3g2upl4pq6kufc4m.onion/" # duckduckGO (via TOR)
+                url = "https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/" # duckduckGO (via TOR)
         elif "!dict" in url: # !dict = Cambridge Dictionary(words)
             url = str(url.split(' ',1)[1]) 
             url = 'https://dictionary.cambridge.org/dictionary/english/' + url
@@ -251,7 +251,7 @@ class Browser(object):
             url = 'https://en.wikipedia.org/wiki/' + url
         elif "!video" in url: # !video = PeerTube(videos)
             url = str(url.split(' ',1)[1]) 
-            url = 'https://peertube.cpy.re/search?search=' + url
+            url = 'https://video.hardlimit.com/search?search=' + url
         elif "!image" in url: # !image = DevianARt(images)
             url = str(url.split(' ',1)[1]) 
             url = 'https://www.deviantart.com/search?q=' + url
@@ -786,7 +786,7 @@ class Browser(object):
 
     def extract_ip_external_from_home_website(self, html):
         try:
-            self.external_ip = html.split('<strong>')[1].split('</strong>')[0].strip()
+            self.external_ip = html.split('<span style="color: #5d9bD3;">')[1].split('</span>')[0].strip()
         except:
             pass # other methods supported... ;-)
 
