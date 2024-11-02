@@ -32,7 +32,7 @@ Gdk.threads_init()
 
 class Browser(object):
     def __init__(self):
-        self.check_ip_service1 = 'https://checkip.org/' # set external check ip service-backup 1 [OK! 01/11/2024]
+        self.check_ip_service1 = 'https://ip.me/' # set external check ip service-backup 1 [OK! 01/11/2024]
         self.home_website = "https://check.torproject.org" # Home website
         self.https_strict = "ON" # HTTPS(strict)
         self.navigation_mode = "EXPLORER" # Navigation mode
@@ -786,7 +786,7 @@ class Browser(object):
 
     def extract_ip_external_from_home_website(self, html):
         try:
-            self.external_ip = html.split('<span style="color: #5d9bD3;">')[1].split('</span>')[0].strip()
+            self.external_ip = html.split('<p class="ip-address">')[1].split('</p>')[0].strip()
         except:
             pass # other methods supported... ;-)
 
